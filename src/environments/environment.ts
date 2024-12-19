@@ -1,5 +1,5 @@
 // src/environments/environment.ts
 export const environment = {
     production: false,
-    apiUrl: 'https://bug-free-potato-g4r466w4v6x5hv9w4-8085.app.github.dev/api/sheds'
+    apiUrl: 'https://jubilant-fortnight-4jvjrrw96r76c77wx-8080.app.github.dev/api/sheds'
 };
