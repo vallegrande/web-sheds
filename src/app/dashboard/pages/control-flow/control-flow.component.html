@@ -42,8 +42,8 @@
           <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Ubicación</th>
           <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Capacidad</th>
           <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Tipo de Pollo</th>
-          <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Fecha de
-            Inspección</th>
+          <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Fecha de Inspección</th>
+          <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Nota</th> <!-- Cambio aquí -->
           <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Estado</th>
           <th class="px-6 py-3 text-lg font-semibold text-blue-900 bg-blue-100 border-b-2 border-blue-200">Acciones</th>
         </tr>
@@ -55,6 +55,7 @@
           <td class="px-6 py-4 bg-gray-100 border-b border-gray-200">{{ shed.capacity }}</td>
           <td class="px-6 py-4 bg-gray-100 border-b border-gray-200">{{ shed.chickenType }}</td>
           <td class="px-6 py-4 bg-gray-100 border-b border-gray-200">{{ shed.inspectionDate }}</td>
+          <td class="px-6 py-4 bg-gray-100 border-b border-gray-200">{{ shed.note }}</td> <!-- Cambio aquí -->
           <td class="px-6 py-4 bg-gray-100 border-b border-gray-200">{{ shed.status }}</td>
           <td class="px-6 py-4 bg-gray-100 border-b border-gray-200 space-x-2">
             <button *ngIf="activeStatus === 'A'" 

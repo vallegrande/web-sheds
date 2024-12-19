@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  prs-backend: 
+    image: chumpitazkasandra/backsheds
+    container_name: prs-backend # Asigné un nombre de contenedor único para el backend
+    environment:
+      - DATABASE_URL=r2dbc:postgresql://ep-icy-sunset-a578ej1o.us-east-2.aws.neon.tech/shed?sslmode=require
+      - DATABASE_USERNAME=shed_owner
+      - DATABASE_PASSWORD=LtCjN8zZmUa1
+    ports:
+      - "8080:8080"
+    networks:
+      - kasandra-network
+
+  prs-frontend:
+    image: chumpitazkasandra/frontsheds
+    container_name: prs-front
+    ports:
+      - "4200:4200" # Puerto expuesto para el frontend
+    depends_on:
+      - prs-backend # Cambié el nombre del backend en la dependencia
+    networks:
+      - prs-network
+
+networks:
+  prs-network: # Renombré la red a "prs-network"
+    driver: bridge
+
+# docker build -t chumpitazkasandra/frontsheds .
+# docker push chumpitazkasandra/frontsheds
